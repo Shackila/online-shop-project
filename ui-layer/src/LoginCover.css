@@ -1,0 +1,15 @@
+.box {
+  height: 380px;
+  width: 273px;
+  margin-left: 0px;
+}
+
+.box .login-cover {
+  background-color: blue;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 380px;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 273px;
+}

@@ -1,0 +1,14 @@
+.box {
+  height: 380px;
+  width: 447px;
+  margin-right: 0px;
+}
+
+.box .motto-cover {
+  background-color: brown;
+  height: 388px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 455px;
+}
