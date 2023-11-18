@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./index.css";
 import Label from "./Label.js";
 import InputField from "./InputField.js";
-import SignUpButton from "./SignUpButton.js";
-import ProfileDashboard from "./ProfileDashboard.js";
+import Button from "./Button.js";
+// import ProfileDashboard from "./ProfileDashboard.js";
 
 const LoginForms = ({ onAddUser }) => {
   const [username, setUsername] = useState("");
@@ -42,17 +42,23 @@ const LoginForms = ({ onAddUser }) => {
   return (
     <div>
       <div className="bg-lightyGray p-3.5 sm:p-10 md:p-16 lg:p-16 shadow-lg">
-        <div className="text-center font-serif">Don't Have An Account?</div>
+        <div className="text-center font-serif text-frog">
+          Don't Have An Account?
+        </div>
         <br />
         {isSignedUp ? (
           <div>
-            <div>Let's start shopping!</div>
+            <div className="text-center font-serif text-frog p-12">
+              Let's start shopping!
+            </div>
             <br />
-            <link href="#" onClick={() => setShowCredentials(true)}>
-              Show Credentials
-            </link>
+            <Button>
+              <a href="#" onClick={() => setShowCredentials(true)}>
+                Show Credentials
+              </a>
+            </Button>
             {showCredentials && (
-              <div>
+              <div className="py-0 text-center">
                 <p>Username: {username}</p>
                 <p>Password: {password}</p>
               </div>
@@ -62,11 +68,15 @@ const LoginForms = ({ onAddUser }) => {
           <div className="flex justify-center ">
             <form onSubmit={submitHandler}>
               <Label>{"Enter your username"}</Label>
-              <InputField state={username} setState={setUsername} />
+              <InputField
+                state={username}
+                setState={setUsername}
+                type={"username"}
+              />
               <Label>{"Enter your Password"}</Label>
               <InputField state={password} setState={setPassword} />
               <br />
-              <SignUpButton>{"Sign Up"}</SignUpButton>
+              <Button>{"Sign Up"}</Button>
               <br />
             </form>
           </div>

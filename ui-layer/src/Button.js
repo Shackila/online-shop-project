@@ -1,5 +1,5 @@
 import "./index.css";
-const SignUpButton = ({ children }) => {
+const Button = ({ children }) => {
   return (
     <div>
       <div className="flex justify-center">
@@ -13,4 +13,4 @@ const SignUpButton = ({ children }) => {
     </div>
   );
 };
-export default SignUpButton;
+export default Button;

@@ -8,7 +8,7 @@ const Layout = () => {
         <MottoCover />
         <LoginCover />
       </span>
-      <footer className="pb-10 text-center">Designed By Shakila Movahed</footer>
+      <footer className="text-frog pt-0 pb-11 text-center font-bold tracking-widest">- Designed By Shakila Movahed -</footer>
     </div>
   );
 };

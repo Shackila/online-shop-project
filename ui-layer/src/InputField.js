@@ -5,6 +5,7 @@ const InputField = ({ setState, state, type }) => {
       <div className="flex justify-center ">
         <input
           className="
+          bg-orange-100
                 rounded-lg
                 focus:outline-none
                 focus:ring

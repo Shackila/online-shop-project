@@ -1,3 +1,4 @@
+import Button from "./Button.js";
 const ProfileDashboard = ({
   showCredentials,
   setShowCredentials,
@@ -6,19 +7,16 @@ const ProfileDashboard = ({
 }) => {
   return (
     <div>
-      <div className="text-sm md:text-xl text-center font-serif">
+      <div className="text-center font-serif text-frog">
         Let's start shopping!
       </div>
       <br />
-      <link href="#" onClick={() => setShowCredentials(true)}>
-        Show Credentials
-      </link>
-      {showCredentials && (
-        <div>
-          <p>Username: {username}</p>
-          <p>Password: {password}</p>
-        </div>
-      )}
+      <Button>
+        <a href="#" onClick={() => setShowCredentials(true)}>
+          Show Credentials
+        </a>
+      </Button>
+
     </div>
   );
 };
