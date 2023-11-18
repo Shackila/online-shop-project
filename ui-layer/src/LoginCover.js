@@ -1,5 +1,5 @@
 import React from "react";
-import "./LoginCover.css";
+import "./index.css";
 import LoginForms from "./LoginForms.js";
 import { useState } from "react";
 
@@ -9,8 +9,8 @@ const LoginCover = () => {
     setUsers((users) => [...users, newUser]);
   };
   return (
-    <div className="box">
-      <div className="login-cover">
+    <div >
+      <div className="flex items-center justify-between">
         <LoginForms onAddUser={addUser} key={new Date().getUTCMinutes} />
       </div>
     </div>

@@ -1,5 +1,9 @@
 import { useState } from "react";
-import "./LoginForms.css";
+import "./index.css";
+import Label from "./Label.js";
+import InputField from "./InputField.js";
+import SignUpButton from "./SignUpButton.js";
+import ProfileDashboard from "./ProfileDashboard.js";
 
 const LoginForms = ({ onAddUser }) => {
   const [username, setUsername] = useState("");
@@ -37,17 +41,16 @@ const LoginForms = ({ onAddUser }) => {
 
   return (
     <div>
-      <div>
-        <div>Welcome To Our Shop!</div>
-        <br />
+      <div className="bg-lightyGray p-3.5 sm:p-10 md:p-16 lg:p-16 shadow-lg">
+        <div className="text-center font-serif">Don't Have An Account?</div>
         <br />
         {isSignedUp ? (
           <div>
             <div>Let's start shopping!</div>
             <br />
-            <a href="#" onClick={() => setShowCredentials(true)}>
+            <link href="#" onClick={() => setShowCredentials(true)}>
               Show Credentials
-            </a>
+            </link>
             {showCredentials && (
               <div>
                 <p>Username: {username}</p>
@@ -56,37 +59,19 @@ const LoginForms = ({ onAddUser }) => {
             )}
           </div>
         ) : flag ? (
-          <div className="form-container">
+          <div className="flex justify-center ">
             <form onSubmit={submitHandler}>
-              <label>Enter Your Username</label>
-              <span className="input-group">
-                <input
-                  className="input"
-                  type="text"
-                  placeholder="username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                />
-              </span>
+              <Label>{"Enter your username"}</Label>
+              <InputField state={username} setState={setUsername} />
+              <Label>{"Enter your Password"}</Label>
+              <InputField state={password} setState={setPassword} />
               <br />
-              <br />
-              <label>Enter Your Password</label>
-              <span className="input-group">
-                <input
-                  className="input"
-                  type="password"
-                  placeholder="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </span>
-              <br />
-              <button type="submit">Sign Up</button>
+              <SignUpButton>{"Sign Up"}</SignUpButton>
               <br />
             </form>
           </div>
         ) : (
-          <div>
+          <div className="flex justify-center">
             {username.trim() === "" ? (
               <div>Username cannot be empty!</div>
             ) : (
