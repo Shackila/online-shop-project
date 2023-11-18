@@ -1,3 +1,4 @@
+/* Common styles for the second component */
 .form-container {
   max-width: 600px;
   margin: 50px auto;
@@ -6,21 +7,27 @@
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 label {
-  margin-bottom: 0px;
+  margin-bottom: 8px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px; /* Adjust the gap between input and button */
 }
 
 input {
+  /* Allow the input to take remaining space */
   padding: 6px;
-  margin-bottom: 16px;
 }
 
 button {
-  padding: 6px;
+  padding: 6px 12px;
   background-color: #4caf50;
   color: white;
   border: none;
@@ -28,9 +35,19 @@ button {
 }
 
 /* Responsive Styles */
-
 @media screen and (min-width: 600px) {
   .form-container {
     width: 80%;
+    padding: 20px; /* Adjusted padding for larger screens */
+  }
+
+  form {
+    flex-direction: row; /* Change to horizontal layout on larger screens */
+    align-items: center; /* Center vertically */
+  }
+
+  label {
+    margin-bottom: 0;
+    margin-right: 8px; /* Add space between label and input */
   }
 }

@@ -1,5 +1,4 @@
-Mobile
-.container {
+Mobile .container {
   padding: 14px;
 }
 
@@ -20,4 +19,10 @@ Mobile
   text-align: center;
   background-color: #ffbe22;
   border-radius: 5px;
+}
+.justify-covers {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

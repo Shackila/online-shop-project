@@ -4,11 +4,10 @@ import MottoCover from "./MottoCover.js";
 const Layout = () => {
   return (
     <div>
-      <div>
-        <LoginCover />
+      <span className="justify-covers">
         <MottoCover />
-      </div>
-      Layout
+        <LoginCover/>
+      </span>
     </div>
   );
 };
