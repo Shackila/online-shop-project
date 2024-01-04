@@ -41,7 +41,7 @@ const LoginForms = ({ onAddUser }) => {
 
   return (
     <div>
-      <div className="bg-lightyGray p-3.5 sm:p-10 md:p-16 lg:p-16 shadow-lg">
+      <div className="bg-lightyGray p-12 sm:p-4 md:p-20 lg:p-16 shadow-lg">
         <div className="text-center font-serif text-frog">
           Don't Have An Account?
         </div>
@@ -83,11 +83,28 @@ const LoginForms = ({ onAddUser }) => {
         ) : (
           <div className="flex justify-center">
             {username.trim() === "" ? (
+              <div className="p-16">
               <div>Username cannot be empty!</div>
+              <div className="flex justify-center">
+                <button
+                  className=" bg-mango  text-lightyGray transition-all duration-400 px-2 sm:px-6 md:px-16 font-serif rounded-full  hover:bg-frog"
+                  onClick={tryAgainHandler}
+                >
+                  Try Again
+                </button>
+                </div>
+              </div>
             ) : (
-              <div>
+              <div className="p-16">
                 <div>Password must contain at least 8 characters!</div>
-                <button onClick={tryAgainHandler}>Try Again</button>
+                <div className="flex justify-center">
+                <button
+                  className=" bg-mango  text-lightyGray transition-all duration-400 px-2 sm:px-6 md:px-16 font-serif rounded-full  hover:bg-frog"
+                  onClick={tryAgainHandler}
+                >
+                  Try Again
+                </button>
+                </div>
               </div>
             )}
           </div>
